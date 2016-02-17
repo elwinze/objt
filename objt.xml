@@ -94,6 +94,54 @@
                         <field name="NUM">150</field>
                       </block>
                     </value>
+                    <next>
+                      <block type="controls_if" id="156" inline="false">
+                        <value name="IF0">
+                          <block type="logic_compare" id="157" inline="true">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="sensor_object" id="158">
+                                <field name="OBJECT">REAR</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="159">
+                                <field name="NUM">75</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="led_select" id="160" inline="true">
+                            <field name="ACTION">FLASH</field>
+                            <value name="LED">
+                              <block type="math_number" id="161">
+                                <field name="NUM">3</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="led_select" id="162" inline="true">
+                                <field name="ACTION">FLASH</field>
+                                <value name="LED">
+                                  <block type="math_number" id="163">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="robot_delay" id="164" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="165">
+                                <field name="NUM">150</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
