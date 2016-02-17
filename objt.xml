@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="36" inline="false" x="125" y="139">
+  <block type="controls_whileUntil" id="36" inline="false" x="124" y="125">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="45">
@@ -138,6 +138,102 @@
                                 <field name="NUM">150</field>
                               </block>
                             </value>
+                            <next>
+                              <block type="controls_if" id="174" inline="false">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="175" inline="true">
+                                    <field name="OP">LT</field>
+                                    <value name="A">
+                                      <block type="sensor_object" id="176">
+                                        <field name="OBJECT">LEFTSIDE</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="177">
+                                        <field name="NUM">75</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="led_select" id="178" inline="true">
+                                    <field name="ACTION">FLASH</field>
+                                    <value name="LED">
+                                      <block type="math_number" id="179">
+                                        <field name="NUM">3</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="led_select" id="180" inline="true">
+                                        <field name="ACTION">FLASH</field>
+                                        <value name="LED">
+                                          <block type="math_number" id="181">
+                                            <field name="NUM">4</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="robot_delay" id="182" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="183">
+                                        <field name="NUM">150</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="controls_if" id="166" inline="false">
+                                        <value name="IF0">
+                                          <block type="logic_compare" id="167" inline="true">
+                                            <field name="OP">LT</field>
+                                            <value name="A">
+                                              <block type="sensor_object" id="168">
+                                                <field name="OBJECT">RIGHTSIDE</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="169">
+                                                <field name="NUM">75</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="led_select" id="170" inline="true">
+                                            <field name="ACTION">FLASH</field>
+                                            <value name="LED">
+                                              <block type="math_number" id="171">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="led_select" id="172" inline="true">
+                                                <field name="ACTION">FLASH</field>
+                                                <value name="LED">
+                                                  <block type="math_number" id="173">
+                                                    <field name="NUM">2</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="robot_delay" id="184" inline="true">
+                                            <value name="DELAY">
+                                              <block type="math_number" id="185">
+                                                <field name="NUM">150</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
