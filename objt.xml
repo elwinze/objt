@@ -45,12 +45,4 @@
       </block>
     </statement>
   </block>
-  <block type="led_select" id="15" inline="true" x="434" y="255">
-    <field name="ACTION">FLASH</field>
-    <value name="LED">
-      <block type="math_number" id="130">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-  </block>
 </xml>
